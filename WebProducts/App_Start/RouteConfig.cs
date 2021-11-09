@@ -15,12 +15,13 @@ namespace WebProducts
 
             routes.MapRoute(
                 name: "IndexByCategory",
-                url: "{controller}/{action}/{category}",
+                url: "{controller}/{action}/{category}/{name}",
                 defaults: new
                 {
                     controller = "Product",
                     action = "Index",
-                    category = UrlParameter.Optional
+                    category = UrlParameter.Optional,
+                    name =UrlParameter.Optional
                 });
 
 
